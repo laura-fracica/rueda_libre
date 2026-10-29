@@ -1,0 +1,191 @@
+
+:root {
+  --verde-ruta: #1F7A4D;
+  --naranja-pedal: #F26B21;
+  --azul-noche: #14213D;
+  --crema: #FFF4E0;
+  --gris-asfalto: #4A4F57;
+
+  --fuente-titulos: "Montserrat", Arial, Helvetica, sans-serif;
+  --fuente-texto: "Open Sans", Arial, Helvetica, sans-serif;
+
+  --espacio-1: 0.5rem;
+  --espacio-2: 1rem;
+  --espacio-3: 1.5rem;
+  --espacio-4: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  color: var(--azul-noche);
+  background-color: var(--crema);
+  padding-bottom: calc(var(--espacio-4) * 3);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fuente-titulos);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main ul {
+  padding: 0;
+}
+
+.portada {
+  min-height: 60vh;
+}
+
+/* ===== 3. NAVEGACIÓN ===== */
+a {
+  color: var(--verde-ruta);
+}
+
+a:hover {
+  color: var(--azul-noche);
+}
+
+#menu li {
+  display: inline-block;
+}
+
+#menu a {
+  color: var(--gris-asfalto);
+  padding: var(--espacio-1);
+}
+
+#menu a.activo {
+  color: var(--verde-ruta);
+  font-weight: 600;
+}
+
+#menu a:hover,
+#menu a:focus {
+  background-color: var(--azul-noche);
+  color: var(--crema);
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus {
+  outline: 3px solid var(--azul-noche);
+  outline-offset: 2px;
+}
+
+/* ===== 4. COMPONENTES ===== */
+.boton-cta,
+button,
+.whatsapp {
+  display: inline-block;
+  color: var(--azul-noche);
+  background-color: var(--naranja-pedal);
+  font-weight: 700;
+  padding: var(--espacio-2) var(--espacio-4);
+  border: 2px solid var(--azul-noche);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton-cta:hover,
+.boton-cta:focus,
+button:hover,
+button:focus,
+.whatsapp:hover,
+.whatsapp:focus {
+  background-color: var(--azul-noche);
+  color: var(--crema);
+}
+
+.tarjeta {
+  list-style: none;
+  width: 100%;
+  padding: var(--espacio-3);
+  margin-bottom: var(--espacio-3);
+  border: 1px solid var(--gris-asfalto);
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.tarjeta img {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: var(--espacio-1) var(--espacio-2);
+  border: 1px solid var(--gris-asfalto);
+}
+
+th {
+  background-color: var(--azul-noche);
+  color: var(--crema);
+}
+
+.etiqueta-nuevo {
+  position: absolute;
+  top: -1rem;
+  right: var(--espacio-2);
+  padding: 0 var(--espacio-2);
+  background-color: var(--naranja-pedal);
+  color: var(--azul-noche);
+  font-weight: 700;
+  border-radius: 0.5rem;
+}
+
+.whatsapp {
+  position: fixed;
+  right: var(--espacio-3);
+  bottom: var(--espacio-3);
+}
+
+/* ===== 5. FORMULARIO ===== */
+input,
+select {
+  border: 2px solid var(--gris-asfalto);
+}
+
+input:hover,
+select:hover {
+  border-color: var(--azul-noche);
+}
+
+fieldset {
+  padding: var(--espacio-3);
+  margin-bottom: var(--espacio-4);
+  border: 1px solid var(--gris-asfalto);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--espacio-1);
+}
+
+input:not([type="button"]),
+select {
+  display: block;
+  width: 100%;
+  padding: var(--espacio-1);
+  margin-bottom: var(--espacio-3);
+}

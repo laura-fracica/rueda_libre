@@ -1,0 +1,166 @@
+1. url		: http://127.0.0.1:5500/index.html
+- protocolo	: http://
+-host		: 127.0.0.1
+-puerto		: 5500
+-ruta		: /index.html
+-metodo de peticion:GET
+-codigo de estado: 304 Not Modified
+
+2. 404 Not Found - significa que la pagina no fue encontrada debido a que no existe.
+
+3. html - es el encargado de la maquetacion del proyecto, estructura y contenido, css es quien
+define la apariencia visual, el JavaScript es quien nos da las funcionalidades. 
+
+    MINI RETO - DIA 2 
+
+    index.html
+header:
+|-title
+|-img
+
+MAIN    
+|-section 1 - ¿Quienes somos?
+|-section 2 - Nuestros servicios 
+|-section 3 - ¿como alquilar?
+|-section 3 - encuentranos 
+
+FOOTER 
+|-direccion
+|-contactanos por email
+
+
+--------------------------------------------------------------
+    reservas.html
+NAV
+|-inicio
+|-tarifas
+|-rutas
+|-reservaS
+
+-----*****RESERVAS SIN ERRORES:*****-----
+Tabla de prueba 
+envio en blanco: pide llenar datos.
+documento con numero 12: pide llenar campo completo 
+fecha superior a la permitida:pide modificacion
+numero de bicicletas superior a la permitida: pide editar
+enviar sin aceptar: pide enviar 
+
+SEMANA 2 -------------------------------------------------------------}
+Estrecha poco a poco la ventana del navegador y describe en la bitácora qué ocurre con el encabezado y el pie. Haz commit y push.
+Al hacer dicha accion el texto va cambiando de renglon acomodandose al tamaño de la pagina. 
+
+
+<<<<<<< HEAD
+
+
+========================================================
+MINI RETO 8 - AUDITORIA DE ACCESIBILIDAD (v0.2)
+========================================================
+Idioma: las tres paginas ya tienen lang="es". Sin cambios.
+
+Hallazgos y correccion:
+1. index.html - alt="bicicleta" en imagen decorativa -> alt="" (el contenido ya esta en el texto).
+2. index.html y tarifas.html - alt="logo de tienda de bicicletas" poco descriptivo -> "Logo de Rueda Libre: pinon de bicicleta con el texto Bike Shop".
+3. index.html - alt="imagen de ruta de bicicleta" -> describe la ilustracion: ruta con curvas, flecha y marcador de destino sobre una bicicleta.
+4. index.html - enlace "click aqui" -> "Ver ubicacion de la tienda".
+5. index.html - enlaces "Google maps" y "GMAIL" -> "Ver Rueda Libre en Google Maps" y "Escribir a holaruedalibre@gmail.com".
+6. tarifas.html - sin h1 en la jerarquia de encabezados -> se agrego <h1>Tarifas de Rueda Libre</h1>.
+7. tarifas.html - enlace "RESERVAR AHORA" con el texto repetido fuera del enlace -> un solo enlace "Reservar ahora".
+8. reservas.html - los mailto no tenian "mailto:" (enlace roto) y el texto "GMAIL" -> href="mailto:..." y texto "Escribir un correo a Rueda Libre".
+9. reservas.html - menu con el texto repetido ("Inicio Inicio", etc.) -> un solo enlace por opcion.
+10. reservas.html (teclado/lectores) - label for="docuemento", for="opciones" y for="cantidaddebicicleta" no coincidian con ningun id -> corregidos para que al enfocar o hacer clic en la etiqueta se active su campo.
+
+CONTRASTE (calculado con la formula WCAG 2.x)
+Colores usados: Verde Ruta #1F7A4D, Naranja Pedal #F26B21, Azul Noche #14213D, Crema #FFF4E0, Gris Asfalto #4A4F57
+(valores de trabajo: verificar contra WebAIM con los HEX oficiales de la marca)
+
+Combinacion                          Ratio    Clasificacion
+Blanco sobre Verde Ruta              5.32:1   Apta texto normal
+Blanco sobre Naranja Pedal           3.04:1   Apta solo texto grande
+Azul Noche sobre Naranja Pedal       5.25:1   Apta texto normal
+Azul Noche sobre Crema              14.66:1   Apta texto normal
+Gris Asfalto sobre Crema             7.56:1   Apta texto normal
+Verde Ruta sobre Crema               4.88:1   Apta texto normal
+Naranja Pedal sobre Crema            2.79:1   No apta
+Blanco sobre Azul Noche             15.97:1   Apta texto normal
+(Crema sobre Azul Noche tiene el mismo ratio que Azul Noche sobre Crema: 14.66:1)
+
+MAPA DE USO DE COLOR
+- Texto principal: Azul Noche sobre Crema.
+- Texto secundario: Gris Asfalto sobre Crema.
+- Fondo de pagina: Crema.
+- Enlaces de texto: Verde Ruta sobre Crema, subrayados. Al pasar el mouse: Azul Noche.
+- Botones: texto Azul Noche sobre fondo Naranja Pedal. Hover/foco: texto Crema sobre fondo Azul Noche.
+- Encabezados de tabla y estado hover del menu: texto Crema sobre fondo Azul Noche.
+- Naranja Pedal nunca como texto sobre Crema (no apta); solo como fondo con texto Azul Noche.
+- Blanco: aprobado sobre Verde Ruta y Azul Noche, pero no se usa porque la paleta del CSS tiene solo los cinco colores de marca.
+
+PUBLICACION
+- GitHub Pages desde la rama main: https://laura-fracica.github.io/modulo-html-css/
+- Recorrido en linea: (completar tras publicar)
+
+
+========================================================
+MINI RETO 9 - IDENTIDAD VISUAL
+========================================================
+- css/styles.css enlazado en las tres paginas (css/styles.css en index.html y ../css/styles.css en paginas/), despues de las fuentes de Google (Montserrat y Open Sans, con preconnect).
+- Variables en :root: 5 colores, 2 familias con respaldo y escala --espacio-1 a --espacio-4 (rem).
+- body aplica fuente, color y fondo con var(); los encabezados usan un solo selector agrupado (h1, h2, h3, h4, h5, h6).
+- Sin style="" ni <style> en los HTML.
+
+Comprobacion de herencia en un <p> (DevTools > Computed):
+- Se hereda: font-family (Open Sans) y color (Azul Noche), definidos solo en body.
+- No se hereda: background-color (el <p> queda transparente; la crema se ve porque es la del body detras).
+(Resultado segun las reglas del CSS; confirmar en DevTools.)
+
+========================================================
+MINI RETO 10 - NAVEGACION CON ESTADOS
+========================================================
+Conflicto "la clase no funciona":
+  #menu a   -> especificidad (1,0,1)
+  .activo   -> especificidad (0,1,0)
+Causa: un id pesa mas que cualquier cantidad de clases, asi que #menu a gana y la declaracion color de .activo aparece tachada en DevTools.
+Solucion (sin !important ni estilos en linea): #menu a.activo -> (1,1,1).
+Detalle de cascada: #menu a:hover y #menu a.activo valen igual (1,1,1); gana el que va despues en el archivo, por eso los estados :hover/:focus estan debajo de .activo.
+
+Estados (todos con contraste >= 4.5:1):
+- Menu: Gris Asfalto sobre Crema (7.56). Activo: Verde Ruta sobre Crema (4.88) en negrita. Hover/foco: Crema sobre Azul Noche (14.66).
+- Enlaces de texto: Verde Ruta sobre Crema (4.88); hover Azul Noche sobre Crema (14.66).
+- Boton .boton-cta y botones del formulario: Azul Noche sobre Naranja Pedal (5.25); hover/foco Crema sobre Azul Noche (14.66).
+- Foco visible: contorno de 3px Azul Noche con separacion en enlaces, botones, campos y listas desplegables; los campos tambien cambian el borde al pasar el mouse.
+Pendiente de hacer en el navegador: recorrer las tres paginas con Tab y revisar estados con el boton :hov.
+
+========================================================
+MINI RETO 11 - MODELO DE CAJA
+========================================================
+- box-sizing: border-box en *, *::before y *::after.
+- main: max-width 60rem y margenes laterales automaticos. Portada de inicio: min-height 60vh.
+- Servicios en tarjetas (.tarjeta): relleno, borde de 1px, esquinas redondeadas y margen inferior con la escala de espaciado; su imagen usa width 100%.
+- Tablas: relleno en celdas, bordes de 1px y encabezado Crema sobre Azul Noche.
+- Formulario: etiqueta sobre cada campo (display block), campos al 100% del ancho, separacion entre grupos y boton con relleno generoso.
+- Menu en fila: #menu li { display: inline-block }.
+- En px solo quedan bordes y contornos.
+
+Medicion del ancho de una tarjeta (pantalla ancha: main = 60rem = 960px; relleno 1.5rem = 24px por lado; borde 1px):
+  content-box: 960 + 24 + 24 + 1 + 1 = 1010px (se sale del contenedor)
+  border-box : 960px
+(Valores calculados; confirmar en DevTools > Computed.)
+Nota: la tarjeta tiene width:100% para que el cambio de box-sizing se note en la medicion.
+
+========================================================
+MINI RETO 12 - RUEDA LIBRE v1.0
+========================================================
+- Etiqueta "Nuevo": position absolute dentro de la tarjeta (position relative), en la esquina superior derecha, sin desplazar el contenido. Se puso en la tarjeta "Alquiler por horas o dias", que es la que menciona las bicicletas electricas.
+- Enlace "WhatsApp" (https://wa.me/573000000000, otra pestana) con position fixed abajo a la derecha en las tres paginas; el body tiene relleno inferior para que no tape el final.
+- styles.css organizado en secciones comentadas: variables, base, navegacion, componentes y formulario; selectores repetidos agrupados.
+- Verificado: sin !important, sin estilos en linea, todas las var() definidas, ningun color fuera de :root.
+
+Resumen de la semana:
+ 1 repositorio y pagina base | 2 pagina de inicio | 3 tarifas con tablas y rutas relativas | 4 sitio navegable v0.1
+ 5 estructura semantica | 6 formulario | 7 validacion y teclado | 8 accesibilidad, mapa de color y publicacion v0.2
+ 9 hoja de estilos con variables | 10 menu con estados | 11 modelo de caja | 12 posicionamiento y v1.0
+Mejoraria: que el formulario envie de verdad (hoy no hay servidor), version para pantallas pequenas y optimizar el peso de las imagenes.
+
+URL v1.0 (GitHub Pages): https://laura-fracica.github.io/modulo-html-css/
+=======
+>>>>>>> 1bbddb8399686e4e399dc2d0f8283f9d92efff35
