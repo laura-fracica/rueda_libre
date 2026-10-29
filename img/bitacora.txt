@@ -50,7 +50,7 @@ Estrecha poco a poco la ventana del navegador y describe en la bitácora qué oc
 Al hacer dicha accion el texto va cambiando de renglon acomodandose al tamaño de la pagina. 
 
 
-<<<<<<< HEAD
+
 
 
 ========================================================
@@ -162,5 +162,8 @@ Resumen de la semana:
 Mejoraria: que el formulario envie de verdad (hoy no hay servidor), version para pantallas pequenas y optimizar el peso de las imagenes.
 
 URL v1.0 (GitHub Pages): https://laura-fracica.github.io/modulo-html-css/
-=======
->>>>>>> 1bbddb8399686e4e399dc2d0f8283f9d92efff35
+
+========================================================
+MINI RETO dia 1 - RUEDA LIBRE v1.0
+========================================================
+-al estrechar la ventana vemos como el contenido se acomoda mas no se corta. 
