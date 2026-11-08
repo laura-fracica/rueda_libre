@@ -38,24 +38,10 @@ img {
   height: auto;
 }
 
-/* Todavía lo usan tarifas.html y reservas.html (inicio usa main.container) */
-main {
-  max-width: 60rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 main ul {
   padding: 0;
 }
 
-/* Todavía lo usa reservas.html (inicio ya usa la grilla de Bootstrap) */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
 
 /* ===== 3. NAVEGACIÓN ===== */
 a {
@@ -66,27 +52,27 @@ a:hover {
   color: var(--azul-noche);
 }
 
-/* Distribución del menú: todavía la usan tarifas.html y reservas.html (inicio usa utilidades) */
-#menu {
-    display: flex;
-    gap: var(--espacio-2);
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* Navbar de Bootstrap con los colores del mapa de uso de color */
+.navbar {
+  --bs-navbar-color: var(--gris-asfalto);
+  --bs-navbar-hover-color: var(--crema);
+  --bs-navbar-active-color: var(--verde-ruta);
+  --bs-navbar-brand-color: var(--azul-noche);
+  --bs-navbar-brand-hover-color: var(--verde-ruta);
 }
 
-#menu a {
-  color: var(--gris-asfalto);
-  padding: var(--espacio-1);
+.navbar-brand {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
 }
 
-#menu a.activo {
-  color: var(--verde-ruta);
+.navbar .nav-link.active {
   font-weight: 600;
 }
 
-#menu a:hover,
-#menu a:focus {
+/* Hover/foco: Crema sobre Azul Noche. Va después de .nav-link.active (misma especificidad) */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible {
   background-color: var(--azul-noche);
   color: var(--crema);
 }
@@ -100,29 +86,48 @@ select:focus {
 }
 
 /* ===== 4. COMPONENTES ===== */
-/* button: todavía lo usa reservas.html */
-.boton-cta,
-button,
-.whatsapp {
-  display: inline-block;
-  color: var(--azul-noche);
-  background-color: var(--naranja-pedal);
-  font-weight: 700;
-  padding: var(--espacio-2) var(--espacio-4);
-  border: 2px solid var(--azul-noche);
-  border-radius: 0.5rem;
-  text-decoration: none;
-  cursor: pointer;
+/* Botones: variantes de Bootstrap con la paleta de marca (btn-primary = reservar, btn-outline-dark = consultar, btn-dark = WhatsApp) */
+.btn {
+  --bs-btn-border-width: 2px;
+  --bs-btn-font-weight: 700;
 }
 
-.boton-cta:hover,
-.boton-cta:focus,
-button:hover,
-button:focus,
-.whatsapp:hover,
-.whatsapp:focus {
-  background-color: var(--azul-noche);
-  color: var(--crema);
+.btn-primary {
+  --bs-btn-color: var(--azul-noche);
+  --bs-btn-bg: var(--naranja-pedal);
+  --bs-btn-border-color: var(--azul-noche);
+  --bs-btn-hover-color: var(--crema);
+  --bs-btn-hover-bg: var(--azul-noche);
+  --bs-btn-hover-border-color: var(--crema);
+  --bs-btn-focus-shadow-rgb: 242, 107, 33;
+  --bs-btn-active-color: var(--crema);
+  --bs-btn-active-bg: var(--azul-noche);
+  --bs-btn-active-border-color: var(--crema);
+}
+
+.btn-outline-dark {
+  --bs-btn-color: var(--azul-noche);
+  --bs-btn-border-color: var(--azul-noche);
+  --bs-btn-hover-color: var(--crema);
+  --bs-btn-hover-bg: var(--azul-noche);
+  --bs-btn-hover-border-color: var(--azul-noche);
+  --bs-btn-focus-shadow-rgb: 20, 33, 61;
+  --bs-btn-active-color: var(--crema);
+  --bs-btn-active-bg: var(--azul-noche);
+  --bs-btn-active-border-color: var(--azul-noche);
+}
+
+.btn-dark {
+  --bs-btn-color: var(--crema);
+  --bs-btn-bg: var(--azul-noche);
+  --bs-btn-border-color: var(--azul-noche);
+  --bs-btn-hover-color: var(--crema);
+  --bs-btn-hover-bg: var(--verde-ruta);
+  --bs-btn-hover-border-color: var(--verde-ruta);
+  --bs-btn-focus-shadow-rgb: 31, 122, 77;
+  --bs-btn-active-color: var(--crema);
+  --bs-btn-active-bg: var(--verde-ruta);
+  --bs-btn-active-border-color: var(--verde-ruta);
 }
 
 .tarjeta {
@@ -140,6 +145,11 @@ button:focus,
 }
 
 /* Tablas: todavía las usa tarifas.html */
+caption {
+  caption-side: top;
+  color: var(--azul-noche);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -197,7 +207,7 @@ label {
   margin-bottom: var(--espacio-1);
 }
 
-input:not([type="button"]),
+input:not([type="button"]):not([type="checkbox"]),
 select {
   display: block;
   width: 100%;
@@ -206,16 +216,7 @@ select {
 }
 
 
-/* ===== 6. CARRUSEL (conflictos con button) ===== */
-/* La regla global de button no debe pintar los controles del carrusel */
-.carousel-control-prev:hover,
-.carousel-control-prev:focus,
-.carousel-control-next:hover,
-.carousel-control-next:focus {
-  background-color: transparent;
-  color: #fff;
-}
-
+/* ===== 6. CARRUSEL ===== */
 /* Bootstrap quita el contorno al enfocar los controles (outline: 0): se devuelve para el teclado */
 .carousel-control-prev:focus-visible,
 .carousel-control-next:focus-visible {

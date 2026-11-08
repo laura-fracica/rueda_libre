@@ -234,3 +234,32 @@ Pruebas de inicio (360, 768 y 1280 px):
 - Columnas por fila a 360 / 768 / 1280 px (medidas en el navegador): flota 1 / 2 / 4; rutas 1 / 2 / 3; beneficios 1 / 2 / 4. En cada fila las cards miden lo mismo (h-100).
 - Franja final: en columna y sin imagen a 360; en fila y con imagen a 768 y 1280.
 - Teclado: Tab llega a los controles Anterior y Siguiente del carrusel y al boton de WhatsApp; con el contorno de la solucion 1 el foco se ve en los controles.
+
+
+========================================================
+MINI RETO dia 5 - NAVBAR Y BOTONES DE BOOTSTRAP
+========================================================
+Navbar (index.html, paginas/tarifas.html y paginas/reservas.html):
+- nav.navbar.navbar-expand-lg > .container > a.navbar-brand + button.navbar-toggler + div.collapse.navbar-collapse > ul.navbar-nav > li.nav-item > a.nav-link.
+- El boton usa data-bs-toggle="collapse", data-bs-target="#menu-principal" y aria-controls igual; el div colapsable tiene id="menu-principal" (igual en las tres paginas). aria-label="Mostrar u ocultar el menu"; Bootstrap actualiza aria-expanded solo.
+- Pagina actual: clase "active" + aria-current="page" en el nav-link (reemplaza la clase "activo" y las reglas #menu de styles.css, que se borraron). En tarifas solo se marca "Tarifas"; "Planes" es un ancla de esa misma pagina y no lleva aria-current.
+- tarifas.html y reservas.html ahora cargan Bootstrap (CSS antes de styles.css). Los tres archivos cargan el bundle de JS una sola vez, como ultimo elemento del body (comprobado: 1 peticion y 1 etiqueta script por pagina).
+
+Botones: btn-primary = reservar (tarjetas de flota y rutas, franja final, ENVIAR del formulario, Reservar ahora de tarifas); btn-outline-dark = consultar (ver ubicacion, planes, Google Maps, correo y contacto); btn-dark = WhatsApp flotante. Tamanos: btn-lg en las acciones principales de pagina (franja, Reservar ahora, ENVIAR), tamano normal en las tarjetas y en el correo de reservas, btn-sm en los enlaces de consulta. Los colores de cada variante se redefinen con las variables --bs-btn-* en styles.css (naranja con Azul Noche para reservar; Azul Noche con Crema al pasar el mouse).
+Se dejaron como enlaces de texto los que van dentro de una frase (Inicio en tarifas, tarifas al final de inicio).
+
+Conflictos nuevos y solucion (sin !important):
+1. La regla global button (naranja, hover Azul Noche) ya no tenia sentido con btn: el toggler de la navbar se habria pintado de Azul Noche al pasar el mouse (button:hover pesa 0,1,1 y .navbar-toggler no define fondo en hover). Se borro la regla global de button y de .boton-cta; los botones salen de las variantes btn-*.
+2. header { display: flex } (solo lo usaba reservas) encogia las filas de la portada: se borro y reservas usa d-flex, flex-wrap, justify-content-between y align-items-center.
+3. Bootstrap pone caption-side: bottom: las tablas de tarifas mostraban el titulo abajo. Se agrego caption { caption-side: top } en styles.css (despues de Bootstrap).
+4. main { max-width: 60rem } ya no lo usa ninguna pagina (las tres tienen main.container): se borro.
+5. Hover/foco del menu: .navbar .nav-link:hover y :focus-visible (0,3,0) van despues de .nav-link.active (0,3,0) para que el enlace activo tambien se vea Crema sobre Azul Noche al pasar el mouse.
+
+Prueba del menu a 360 px (navegador automatizado, mismas 3 paginas):
+- Mouse: el boton abre y cierra los enlaces (aria-expanded true al abrir).
+- Teclado: Tab llega al boton, Enter abre, Tab recorre Inicio, Tarifas, Planes y Reservas, y Enter sobre el boton cierra.
+- 991 px: boton visible y enlaces ocultos; 992 px: enlaces visibles y sin boton.
+
+Errores de validez que se corrigieron al tocar estas paginas:
+- tarifas.html: <caption> de Planes fuera de la tabla.
+- reservas.html: target=""_blank" del enlace de correo; fecha con type="number" y min/max de fechas (ahora type="date"); cantidad con type="cantidad" (ahora text con inputmode numerico y el mismo pattern); casilla de politicas con type="politicas" (ahora checkbox con sus etiquetas); comentarios sin id; input vacio de tipo button sobrante; <dd> sueltos en el footer (ahora <p>). El validador da 0 errores en index, tarifas y reservas.

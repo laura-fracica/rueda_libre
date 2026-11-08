@@ -7,20 +7,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
-    <h1>Tarifas de Rueda Libre</h1>
-    <nav>
-        <ul id="menu">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a class="activo" href="tarifas.html">Tarifas</a></li>
-            <li><a href="tarifas.html#planes">Planes</a></li>
-            <li><a href="reservas.html">Reservas</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Rueda Libre</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Mostrar u ocultar el menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="tarifas.html">Tarifas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tarifas.html#planes">Planes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    
+
+    <main class="container">
+    <h1>Tarifas de Rueda Libre</h1>
+
     <table>
         <caption>Tarifas por hora</caption>
             <thead>
@@ -58,8 +69,8 @@
 
 <img src="../img/icono-aislado-dibujo-de-la-bicicleta-83199925.webp" alt="Logo de Rueda Libre: bicicleta dorada con el texto Rueda Libre" width="600">
 
-<caption>Planes</caption>
 <table id="planes">
+<caption>Planes</caption>
     <thead>
         <tr>
             <th>Recorridos</th>
@@ -97,13 +108,16 @@
  </tbody>
 </table>
 
-<p><a class="boton-cta" href="../paginas/reservas.html">Reservar ahora</a></p>
+<p><a class="btn btn-primary btn-lg" href="reservas.html">Reservar ahora</a></p>
 
 <p>Todas las tarifas incluyen casco y candado. Los recorridos salen sábados y domingos a las 7:00 a. m. Qué llevar: ropa cómoda, agua, protector solar y documento de identidad.</p>
 <p>Regresar a la pagina anterior <a href="../index.html">Inicio</a></p>
+    </main>
 
     
-    <a class="whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="whatsapp btn btn-dark" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>
