@@ -263,3 +263,12 @@ Prueba del menu a 360 px (navegador automatizado, mismas 3 paginas):
 Errores de validez que se corrigieron al tocar estas paginas:
 - tarifas.html: <caption> de Planes fuera de la tabla.
 - reservas.html: target=""_blank" del enlace de correo; fecha con type="number" y min/max de fechas (ahora type="date"); cantidad con type="cantidad" (ahora text con inputmode numerico y el mismo pattern); casilla de politicas con type="politicas" (ahora checkbox con sus etiquetas); comentarios sin id; input vacio de tipo button sobrante; <dd> sueltos en el footer (ahora <p>). El validador da 0 errores en index, tarifas y reservas.
+
+========================================================
+MINI RETO - TAILWIND (nocturna/prototipo.html)
+========================================================
+Boton "Inscribete" con Bootstrap (semana 2): <a class="btn btn-primary btn-lg" href="paginas/reservas.html">Inscribete</a>. Las clases btn y btn-primary ya traen el color, el relleno y el borde, y solo se cambiaron las variables --bs-btn-* en styles.css.
+
+Boton "Inscribete" con Tailwind (hoy): <a class="inline-block w-48 px-6 py-3 mt-4 text-center font-bold uppercase tracking-wider bg-orange-500 text-slate-900" href="../paginas/reservas.html">Inscribete</a>. Cada clase hace una sola cosa (ancho, relleno, color, tipografia) y hubo que juntarlas para que pareciera un boton.
+
+Diferencia clave: un framework de componentes como Bootstrap trae piezas ya hechas (btn) y para cambiarlas hay que sobrescribir su CSS, mientras que uno utility-first como Tailwind solo da utilidades pequenas y el diseno se arma en el HTML sin escribir CSS propio.
