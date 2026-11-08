@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-verde-ruta: #1f7a4d;
+  --color-naranja-pedal: #f26b21;
+  --color-azul-noche: #14213d;
+  --color-crema: #fff4e0;
+  --color-gris-asfalto: #4a4f57;
+  --color-amarillo-farol: #ffc83d;
+
+  --font-titulos: "Montserrat", Arial, Helvetica, sans-serif;
+  --font-texto: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .btn-primario {
+    @apply inline-block px-6 py-3 font-titulos text-center font-bold uppercase tracking-wider bg-naranja-pedal text-azul-noche rounded-lg shadow-md hover:bg-amarillo-farol hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-azul-noche dark:focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-offset-azul-noche;
+  }
+
+  .btn-secundario {
+    @apply inline-block px-6 py-3 font-titulos text-center font-bold uppercase tracking-wider border-azul-noche text-azul-noche rounded-lg border-2 dark:border-naranja-pedal dark:text-amarillo-farol hover:bg-azul-noche dark:hover:bg-naranja-pedal hover:text-crema dark:hover:text-azul-noche focus:outline-none focus:ring-4 focus:ring-azul-noche dark:focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-offset-azul-noche;
+  }
+
+  .btn-terciario {
+    @apply inline-block px-6 py-3 font-titulos text-center font-bold uppercase tracking-wider bg-gris-asfalto text-crema rounded-lg hover:bg-azul-noche dark:hover:bg-crema hover:text-amarillo-farol dark:hover:text-azul-noche focus:outline-none focus:ring-4 focus:ring-azul-noche dark:focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-offset-azul-noche;
+  }
+}

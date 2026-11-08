@@ -4,94 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruta nocturna - Rueda Libre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/output.css">
 </head>
-<body class="bg-slate-900 text-slate-100">
-    <main class="max-w-2xl mx-auto p-6 space-y-4">
-        <h1 class="text-4xl font-bold uppercase tracking-wide leading-tight text-orange-400">Ruta nocturna</h1>
-        <p class="text-lg leading-relaxed text-slate-300">Recorre la ciudad de noche en bicicleta junto a Rueda Libre, con guía y luces incluidas.</p>
-        <ul class="space-y-2 text-slate-200">
-            <li>Fecha: sábados de noviembre</li>
-            <li>Hora de salida: 7:00 p. m.</li>
-            <li>Punto de encuentro: sede principal</li>
-        </ul>
-        <div class="flex flex-wrap gap-4 pt-4">
-            <a href="../paginas/reservas.html" class="inline-block w-48 px-6 py-3 text-center font-bold uppercase tracking-wider rounded-lg shadow-md bg-orange-500 text-slate-900 hover:bg-orange-300 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-orange-200 focus:ring-offset-2 focus:ring-offset-slate-900">Inscríbete</a>
-            <a href="../paginas/tarifas.html" class="inline-block w-48 px-6 py-3 text-center font-bold uppercase tracking-wider rounded-lg border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-slate-900 focus:outline-none focus:ring-4 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-slate-900">Ver tarifas</a>
-            <a href="../index.html" class="inline-block w-48 px-6 py-3 text-center font-bold uppercase tracking-wider rounded-lg bg-slate-700 text-slate-100 hover:bg-slate-600 hover:text-orange-300 focus:outline-none focus:ring-4 focus:ring-slate-300 focus:ring-offset-2 focus:ring-offset-slate-900">Volver</a>
+<body class="font-texto bg-crema text-azul-noche dark:bg-azul-noche dark:text-crema">
+    <header class="border-gris-asfalto/40 bg-white border-b-2 dark:border-crema/20 dark:bg-crema/10">
+        <div class="flex flex-col items-start gap-4 max-w-6xl mx-auto md:flex-row md:items-center md:justify-between px-4 py-4 sm:px-6 lg:px-8">
+            <a href="#inicio" class="font-titulos text-xl font-bold uppercase tracking-wide text-azul-noche dark:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche dark:focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-offset-azul-noche">Rueda Libre</a>
+            <nav class="flex items-center gap-6">
+                <a href="#rutas" class="hidden md:block text-sm font-semibold uppercase tracking-wider text-azul-noche dark:text-crema hover:text-verde-ruta dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche dark:focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-offset-azul-noche">Rutas</a>
+                <a href="#como-funciona" class="hidden md:block text-sm font-semibold uppercase tracking-wider text-azul-noche dark:text-crema hover:text-verde-ruta dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche dark:focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-offset-azul-noche">¿Cómo funciona?</a>
+                <a href="#contacto" class="hidden md:block text-sm font-semibold uppercase tracking-wider text-azul-noche dark:text-crema hover:text-verde-ruta dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche dark:focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-offset-azul-noche">Contacto</a>
+                <a href="../paginas/reservas.html" class="btn-primario w-48">Inscríbete</a>
+            </nav>
         </div>
-        <section class="pt-8 space-y-6">
-            <h2 class="text-3xl font-bold uppercase tracking-wide text-slate-100">Rutas</h2>
-            <article class="flex flex-col overflow-hidden rounded-xl border-2 border-slate-700 bg-slate-800 shadow-md hover:border-orange-400 hover:shadow-2xl">
-                <img src="../img/urbanaclasica.jpeg" alt="Bicicleta urbana en un parque" class="w-full h-48 object-cover">
-                <div class="flex flex-col flex-1 p-5 space-y-4">
-                    <span class="self-start px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-green-200 text-green-900">Nivel: Fácil</span>
-                    <h3 class="text-2xl font-bold leading-tight text-slate-100">Rio y parques</h3>
-                    <dl class="space-y-2">
-                        <div>
-                            <dt class="text-xs uppercase tracking-wider text-slate-400">Distancia</dt>
-                            <dd class="text-lg font-semibold text-slate-100">12 km</dd>
-                        </div>
-                        <div>
-                            <dt class="text-xs uppercase tracking-wider text-slate-400">Duración</dt>
-                            <dd class="text-lg font-semibold text-slate-100">1 h 30 min</dd>
-                        </div>
-                        <div>
-                            <dt class="text-xs uppercase tracking-wider text-slate-400">Punto de encuentro</dt>
-                            <dd class="text-lg font-semibold text-slate-100">Sede principal</dd>
-                        </div>
-                    </dl>
-                    <p class="text-3xl font-bold text-orange-400">$45.000</p>
-                    <a href="../paginas/reservas.html" class="inline-block w-full px-6 py-3 text-center font-bold uppercase tracking-wider rounded-lg shadow-md bg-orange-500 text-slate-900 hover:bg-orange-300 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-orange-200 focus:ring-offset-2 focus:ring-offset-slate-900">Reservar</a>
+    </header>
+
+    <main>
+        <section id="inicio" class="py-10 sm:py-12 lg:py-16">
+            <div class="max-w-6xl mx-auto px-4 space-y-4 sm:px-6 lg:px-8">
+                <h1 class="font-titulos text-3xl font-bold uppercase tracking-wide leading-tight sm:text-4xl lg:text-5xl text-azul-noche dark:text-amarillo-farol">Ruta nocturna</h1>
+                <p class="max-w-2xl text-base leading-relaxed sm:text-lg text-gris-asfalto dark:text-crema/80">Recorre la ciudad de noche en bicicleta junto a Rueda Libre, con guía y luces incluidas. Salimos los sábados de noviembre a las 7:00 p. m.</p>
+                <a href="../paginas/tarifas.html" class="btn-secundario w-48">Ver tarifas</a>
+            </div>
+        </section>
+
+        <section id="rutas" class="py-10 sm:py-12 lg:py-16">
+            <div class="max-w-6xl mx-auto px-4 space-y-6 sm:px-6 lg:px-8">
+                <h2 class="font-titulos text-2xl font-bold uppercase tracking-wide sm:text-3xl text-azul-noche dark:text-crema">Rutas</h2>
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <article class="flex flex-col overflow-hidden border-gris-asfalto/40 bg-white rounded-xl border-2 shadow-md dark:border-crema/20 dark:bg-crema/10 hover:border-naranja-pedal hover:shadow-2xl">
+                    <img src="../img/urbanaclasica.jpeg" alt="Bicicleta urbana en un parque" class="w-full h-48 object-cover">
+                    <div class="flex flex-col flex-1 p-6 space-y-4">
+                        <span class="self-start px-3 py-1 font-titulos text-xs font-bold uppercase tracking-wider bg-verde-ruta text-crema rounded-full">Nivel: Fácil</span>
+                        <h3 class="font-titulos text-2xl font-bold leading-tight text-azul-noche dark:text-crema">Rio y parques</h3>
+                        <dl class="space-y-2">
+                            <div>
+                                <dt class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Distancia</dt>
+                                <dd class="text-lg font-semibold text-azul-noche dark:text-crema">12 km</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Duración</dt>
+                                <dd class="text-lg font-semibold text-azul-noche dark:text-crema">1 h 30 min</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Punto de encuentro</dt>
+                                <dd class="text-lg font-semibold text-azul-noche dark:text-crema">Sede principal</dd>
+                            </div>
+                        </dl>
+                        <p class="font-titulos text-3xl font-bold text-azul-noche dark:text-amarillo-farol">$45.000</p>
+                        <a href="../paginas/reservas.html" class="btn-primario w-full">Reservar</a>
+                    </div>
+                </article>
+                <article class="flex flex-col overflow-hidden border-gris-asfalto/40 bg-white rounded-xl border-2 shadow-md dark:border-crema/20 dark:bg-crema/10 hover:border-naranja-pedal hover:shadow-2xl">
+                    <img src="../img/GravelAventura.jpeg" alt="Bicicleta de grava en una calle de barrio" class="w-full h-48 object-cover">
+                    <div class="flex flex-col flex-1 p-6 space-y-4">
+                        <span class="self-start px-3 py-1 font-titulos text-xs font-bold uppercase tracking-wider bg-amarillo-farol text-azul-noche rounded-full">Nivel: Medio</span>
+                        <h3 class="font-titulos text-2xl font-bold leading-tight text-azul-noche dark:text-crema">Sabores de barrio</h3>
+                        <dl class="space-y-2">
+                            <div>
+                                <dt class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Distancia</dt>
+                                <dd class="text-lg font-semibold text-azul-noche dark:text-crema">18 km</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Duración</dt>
+                                <dd class="text-lg font-semibold text-azul-noche dark:text-crema">2 h 15 min</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Punto de encuentro</dt>
+                                <dd class="text-lg font-semibold text-azul-noche dark:text-crema">Sede centro</dd>
+                            </div>
+                        </dl>
+                        <p class="font-titulos text-3xl font-bold text-azul-noche dark:text-amarillo-farol">$60.000</p>
+                        <a href="../paginas/reservas.html" class="btn-primario w-full">Reservar</a>
+                    </div>
+                </article>
+                <article class="flex flex-col overflow-hidden border-gris-asfalto/40 bg-white rounded-xl border-2 shadow-md dark:border-crema/20 dark:bg-crema/10 hover:border-naranja-pedal hover:shadow-2xl">
+                    <img src="../img/montanatrail.jpeg" alt="Bicicleta de montaña en un sendero" class="w-full h-48 object-cover">
+                    <div class="flex flex-col flex-1 p-6 space-y-4">
+                        <span class="self-start px-3 py-1 font-titulos text-xs font-bold uppercase tracking-wider bg-naranja-pedal text-azul-noche rounded-full">Nivel: Difícil</span>
+                        <h3 class="font-titulos text-2xl font-bold leading-tight text-azul-noche dark:text-crema">Reto las palmas</h3>
+                        <dl class="space-y-2">
+                            <div>
+                                <dt class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Distancia</dt>
+                                <dd class="text-lg font-semibold text-azul-noche dark:text-crema">25 km</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Duración</dt>
+                                <dd class="text-lg font-semibold text-azul-noche dark:text-crema">3 h 30 min</dd>
+                            </div>
+                            <div>
+                                <dt class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Punto de encuentro</dt>
+                                <dd class="text-lg font-semibold text-azul-noche dark:text-crema">Sede norte</dd>
+                            </div>
+                        </dl>
+                        <p class="font-titulos text-3xl font-bold text-azul-noche dark:text-amarillo-farol">$85.000</p>
+                        <a href="../paginas/reservas.html" class="btn-primario w-full">Reservar</a>
+                    </div>
+                </article>
                 </div>
-            </article>
-            <article class="flex flex-col overflow-hidden rounded-xl border-2 border-slate-700 bg-slate-800 shadow-md hover:border-orange-400 hover:shadow-2xl">
-                <img src="../img/GravelAventura.jpeg" alt="Bicicleta de grava en una calle de barrio" class="w-full h-48 object-cover">
-                <div class="flex flex-col flex-1 p-5 space-y-4">
-                    <span class="self-start px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-amber-200 text-amber-900">Nivel: Medio</span>
-                    <h3 class="text-2xl font-bold leading-tight text-slate-100">Sabores de barrio</h3>
-                    <dl class="space-y-2">
-                        <div>
-                            <dt class="text-xs uppercase tracking-wider text-slate-400">Distancia</dt>
-                            <dd class="text-lg font-semibold text-slate-100">18 km</dd>
-                        </div>
-                        <div>
-                            <dt class="text-xs uppercase tracking-wider text-slate-400">Duración</dt>
-                            <dd class="text-lg font-semibold text-slate-100">2 h 15 min</dd>
-                        </div>
-                        <div>
-                            <dt class="text-xs uppercase tracking-wider text-slate-400">Punto de encuentro</dt>
-                            <dd class="text-lg font-semibold text-slate-100">Sede centro</dd>
-                        </div>
-                    </dl>
-                    <p class="text-3xl font-bold text-orange-400">$60.000</p>
-                    <a href="../paginas/reservas.html" class="inline-block w-full px-6 py-3 text-center font-bold uppercase tracking-wider rounded-lg shadow-md bg-orange-500 text-slate-900 hover:bg-orange-300 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-orange-200 focus:ring-offset-2 focus:ring-offset-slate-900">Reservar</a>
-                </div>
-            </article>
-            <article class="flex flex-col overflow-hidden rounded-xl border-2 border-slate-700 bg-slate-800 shadow-md hover:border-orange-400 hover:shadow-2xl">
-                <img src="../img/montanatrail.jpeg" alt="Bicicleta de montaña en un sendero" class="w-full h-48 object-cover">
-                <div class="flex flex-col flex-1 p-5 space-y-4">
-                    <span class="self-start px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full bg-red-200 text-red-900">Nivel: Difícil</span>
-                    <h3 class="text-2xl font-bold leading-tight text-slate-100">Reto las palmas</h3>
-                    <dl class="space-y-2">
-                        <div>
-                            <dt class="text-xs uppercase tracking-wider text-slate-400">Distancia</dt>
-                            <dd class="text-lg font-semibold text-slate-100">25 km</dd>
-                        </div>
-                        <div>
-                            <dt class="text-xs uppercase tracking-wider text-slate-400">Duración</dt>
-                            <dd class="text-lg font-semibold text-slate-100">3 h 30 min</dd>
-                        </div>
-                        <div>
-                            <dt class="text-xs uppercase tracking-wider text-slate-400">Punto de encuentro</dt>
-                            <dd class="text-lg font-semibold text-slate-100">Sede norte</dd>
-                        </div>
-                    </dl>
-                    <p class="text-3xl font-bold text-orange-400">$85.000</p>
-                    <a href="../paginas/reservas.html" class="inline-block w-full px-6 py-3 text-center font-bold uppercase tracking-wider rounded-lg shadow-md bg-orange-500 text-slate-900 hover:bg-orange-300 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-orange-200 focus:ring-offset-2 focus:ring-offset-slate-900">Reservar</a>
-                </div>
-            </article>
+            </div>
+        </section>
+
+        <section id="como-funciona" class="py-10 sm:py-12 lg:py-16">
+            <div class="max-w-6xl mx-auto px-4 space-y-6 sm:px-6 lg:px-8">
+                <h2 class="font-titulos text-2xl font-bold uppercase tracking-wide sm:text-3xl text-azul-noche dark:text-crema">¿Cómo funciona?</h2>
+                <ol class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <li class="space-y-2">
+                    <p class="font-titulos text-3xl font-bold text-azul-noche dark:text-amarillo-farol">1</p>
+                    <h3 class="font-titulos text-xl font-bold text-azul-noche dark:text-crema">Elige tu ruta</h3>
+                    <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Mira las rutas y escoge la que va con tu nivel.</p>
+                </li>
+                <li class="space-y-2">
+                    <p class="font-titulos text-3xl font-bold text-azul-noche dark:text-amarillo-farol">2</p>
+                    <h3 class="font-titulos text-xl font-bold text-azul-noche dark:text-crema">Reserva en línea</h3>
+                    <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Llena el formulario con tus datos y la fecha.</p>
+                </li>
+                <li class="space-y-2">
+                    <p class="font-titulos text-3xl font-bold text-azul-noche dark:text-amarillo-farol">3</p>
+                    <h3 class="font-titulos text-xl font-bold text-azul-noche dark:text-crema">Recoge tu bicicleta</h3>
+                    <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Llega a la sede con tu documento de identidad.</p>
+                </li>
+                <li class="space-y-2">
+                    <p class="font-titulos text-3xl font-bold text-azul-noche dark:text-amarillo-farol">4</p>
+                    <h3 class="font-titulos text-xl font-bold text-azul-noche dark:text-crema">Pedalea y entrega</h3>
+                    <p class="leading-relaxed text-gris-asfalto dark:text-crema/80">Haz el recorrido y devuelve la bicicleta en cualquier sede.</p>
+                </li>
+                </ol>
+            </div>
         </section>
     </main>
+
+    <footer id="contacto" class="border-gris-asfalto/40 bg-white border-t-2 dark:border-crema/20 dark:bg-crema/10">
+        <div class="flex flex-col items-start gap-6 max-w-6xl mx-auto md:flex-row md:justify-between px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
+            <div class="space-y-2">
+                <p class="font-titulos text-xl font-bold uppercase tracking-wide text-azul-noche dark:text-amarillo-farol">Rueda Libre</p>
+                <p class="text-sm text-gris-asfalto dark:text-crema/80">Alquiler de bicicletas y rutas guiadas.</p>
+            </div>
+            <div class="space-y-2">
+                <p class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Horario</p>
+                <p class="font-semibold text-azul-noche dark:text-crema">Todos los días, 8:00 a. m. a 8:00 p. m.</p>
+            </div>
+            <div class="space-y-2">
+                <p class="text-xs uppercase tracking-wider text-gris-asfalto dark:text-crema/80">Correo</p>
+                <a href="mailto:hola@ruedalibre.example" class="font-semibold text-azul-noche dark:text-crema hover:text-verde-ruta dark:hover:text-amarillo-farol focus:outline-none focus:ring-4 focus:ring-azul-noche dark:focus:ring-amarillo-farol focus:ring-offset-2 focus:ring-offset-crema dark:focus:ring-offset-azul-noche">hola@ruedalibre.example</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
