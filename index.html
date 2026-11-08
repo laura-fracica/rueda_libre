@@ -14,22 +14,34 @@
 
 <body>
 
-    <header class="portada">
-        <h1>RUEDA LIBRE</h1>
-        <nav>
-            <ul id="menu">
-                <li><a class="activo" href="index.html">Inicio</a></li>
-                <li><a href="paginas/tarifas.html">Tarifas</a></li>
-                <li><a href="paginas/tarifas.html#planes">Planes</a></li>
-                <li><a href="paginas/reservas.html">Reservas</a></li>
-            </ul>
-        </nav>
-        <p>Bienvenido al mejor sitio de alquiler de bicicletas de Medellín.</p>
-        <img src="img/icono-aislado-dibujo-de-la-bicicleta-83199925.webp" alt="Logo de Rueda Libre: bicicleta dorada con el texto Rueda Libre" width="600">
-        <p>Donde estamos ubicados <a href="#Encuentranos">Ver ubicación de la tienda</a></p>
+    <header class="container py-4">
+        <div class="w-100">
+        <div class="row align-items-center g-3">
+            <div class="col-12 col-md-4">
+                <h1 class="m-0">RUEDA LIBRE</h1>
+            </div>
+            <nav class="col-12 col-md-8">
+                <ul id="menu" class="d-flex flex-wrap justify-content-md-end gap-2 list-unstyled m-0 p-0">
+                    <li><a class="activo" href="index.html">Inicio</a></li>
+                    <li><a href="paginas/tarifas.html">Tarifas</a></li>
+                    <li><a href="paginas/tarifas.html#planes">Planes</a></li>
+                    <li><a href="paginas/reservas.html">Reservas</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row align-items-center g-4 mt-1">
+            <div class="col-12 col-md-6 order-2 order-md-1">
+                <p class="lead">Bienvenido al mejor sitio de alquiler de bicicletas de Medellín.</p>
+                <p>Donde estamos ubicados <a href="#Encuentranos">Ver ubicación de la tienda</a></p>
+            </div>
+            <div class="col-12 col-md-6 order-1 order-md-2 text-center">
+                <img class="img-fluid" src="img/icono-aislado-dibujo-de-la-bicicleta-83199925.webp" alt="Logo de Rueda Libre: bicicleta dorada con el texto Rueda Libre" width="600" height="600">
+            </div>
+        </div>
+        </div>
     </header>
 
-    <main>
+    <main class="container">
         <section aria-label="Promociones">
             <div id="promociones" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -84,7 +96,7 @@
             </ul>
         </section>
 
-        <article class="seccion-flota container">
+        <article class="seccion-flota">
             <h2>Nuestra flota</h2>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
                 <div class="col">
@@ -145,7 +157,7 @@
             </div>
         </article>
 
-        <section class="container" id="rutas">
+        <section id="rutas">
             <h2>Galería de rutas</h2>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
                 <div class="col">
@@ -196,47 +208,48 @@
             </ol>
         </section>
 
-        <section class="container my-5 pt-4">
-            <h2 class="display-4 fw-bold text-center mb-5">Nuestros beneficios</h2>
-                <div class="p-4 bg-light rounded-3 shadow-sm border">
-
+        <section class="mt-5">
+            <h2 class="text-center fw-bold mb-4">Nuestros beneficios</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
                 <div class="col">
-                    <div class="p-4 bg-Emphasis rounded-3 shadow-sm border">
-                            <div class="fw-bold fs-5">Bicicletas revisadas</div>
-                            <p class="fs-6 text-secondary mb-3">Bicicletas completamente puestas a punto y verificadas para asegurar un recorrido fluido y sin fallas mecánicas</p>
-                            <span class="d-inline-block fs-6 fw-semibold text-success bg-success-subtle px-2 py-1 rounded">⚡ Tu dato destacado aquí</span>
+                    <div class="h-100 p-4 bg-white border rounded-3 shadow-sm">
+                        <h3 class="fw-bold fs-5 mb-2">Bicicletas revisadas</h3>
+                        <p class="text-secondary mb-3">Bicicletas completamente puestas a punto y verificadas para asegurar un recorrido fluido y sin fallas mecánicas.</p>
+                        <span class="d-inline-block fw-semibold text-bg-success px-2 py-1 rounded">Soporte mecánico en ruta</span>
                     </div>
                 </div>
-                
                 <div class="col">
-                    <div class="p-4 bg-Emphasis rounded-3 shadow-sm border">
-                            <div class="fw-bold fs-5">Casco y candado incluidos</div>
-                            <p class="fs-6 text-secondary mb-3">Bicicleta revisada, casco y candado incluidos para rodar con total seguridad y tranquilidad.</p>
-                            <span class="d-inline-block fs-6 fw-semibold text-success bg-success-subtle px-2 py-1 rounded">⚡ Tu dato destacado aquí</span>
+                    <div class="h-100 p-4 bg-white border rounded-3 shadow-sm">
+                        <h3 class="fw-bold fs-5 mb-2">Casco y candado incluidos</h3>
+                        <p class="text-secondary mb-3">Bicicleta revisada, casco y candado incluidos para rodar con total seguridad y tranquilidad.</p>
+                        <span class="d-inline-block fw-semibold text-bg-success px-2 py-1 rounded">Sin costo adicional</span>
                     </div>
                 </div>
-                
                 <div class="col">
-                    <div class="p-4 bg-Emphasis rounded-3 shadow-sm border">
-                            <div class="fw-bold fs-5">Guías certificados</div>
-                            <p class="fs-6 text-secondary mb-3">Guías locales capacitados que garantizan una experiencia segura, enriquecedora y libre de contratiempos en la ruta.</p>
-                            <span class="d-inline-block fs-6 fw-semibold text-success bg-success-subtle px-2 py-1 rounded">⚡ Tu dato destacado aquí</span>
+                    <div class="h-100 p-4 bg-white border rounded-3 shadow-sm">
+                        <h3 class="fw-bold fs-5 mb-2">Guías certificados</h3>
+                        <p class="text-secondary mb-3">Guías locales capacitados que garantizan una experiencia segura, enriquecedora y libre de contratiempos en la ruta.</p>
+                        <span class="d-inline-block fw-semibold text-bg-success px-2 py-1 rounded">Sábados y domingos, 7:00 a. m.</span>
                     </div>
                 </div>
-                
-                 <div class="col">
-                    <div class="p-4 bg-Emphasis rounded-3 shadow-sm border">
-                            <div class="fw-bold fs-5">Puntos de devolución en tres sedes</div>
-                            <p class="fs-6 text-secondary mb-3">: Posibilidad de entregar la bicicleta en cualquiera de nuestras tres sedes al finalizar el recorrido, simplificando la logística del viaje.</p>
-                            <span class="d-inline-block fs-6 fw-semibold text-success bg-success-subtle px-2 py-1 rounded">⚡ Tu dato destacado aquí</span>
+                <div class="col">
+                    <div class="h-100 p-4 bg-white border rounded-3 shadow-sm">
+                        <h3 class="fw-bold fs-5 mb-2">Puntos de devolución en tres sedes</h3>
+                        <p class="text-secondary mb-3">Posibilidad de entregar la bicicleta en cualquiera de nuestras tres sedes al finalizar el recorrido, simplificando la logística del viaje.</p>
+                        <span class="d-inline-block fw-semibold text-bg-success px-2 py-1 rounded">3 sedes</span>
                     </div>
                 </div>
-
-                <h3 id="formulario-reserva" class="fw-bold fs-2 text-primary mb-3">¿Listo para rodar?</h3>
-
             </div>
         </section>
 
+        <section class="d-flex flex-column flex-md-row align-items-center justify-content-md-between gap-3 text-bg-dark rounded-3 p-4 my-5">
+            <div class="text-center text-md-start">
+                <h2 class="fs-4 fw-bold mb-1">¿Listo para rodar?</h2>
+                <p class="mb-0">Reserva tu bicicleta hoy y sal a explorar Medellín.</p>
+            </div>
+            <a class="bg-warning text-dark fw-bold text-decoration-none px-4 py-2 rounded-3" href="paginas/reservas.html">Reservar ahora</a>
+            <img class="d-none d-md-block rounded-3" src="img/montanatrail.jpeg" alt="" width="200" height="109">
+        </section>
 
         <section>
             <h2 id="Encuentranos">Encuentranos</h2>

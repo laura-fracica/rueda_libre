@@ -195,3 +195,42 @@ Mapa de uso de color llevado a Bootstrap (la paleta de Bootstrap no es la de la 
 - Dato destacado: texto blanco sobre fondo verde -> text-bg-success (equivale a Blanco sobre Verde Ruta, aprobado).
 - Franja: texto claro sobre fondo oscuro -> text-bg-dark (equivale a Crema/Blanco sobre Azul Noche).
 - Enlace de la franja: texto oscuro sobre fondo naranja/amarillo -> bg-warning text-dark (equivale a Azul Noche sobre Naranja Pedal; el naranja solo como fondo, nunca como texto).
+
+
+========================================================
+MINI RETO dia 4 - BOOTSTRAP EN INICIO + CONFLICTOS
+========================================================
+Orden de carga en index.html: fuentes de Google -> bootstrap.min.css -> css/styles.css (la hoja propia va despues, asi a igual especificidad gana la mia). El bundle JS va al final del body.
+
+Inicio ahora usa grilla y utilidades en: portada (row/col, order-*, img-fluid), flota, rutas, beneficios y franja final (d-flex, flex-column flex-md-row, gap-3).
+Reglas borradas de styles.css: .portada { min-height }. Las reglas de header, main, #menu, button, tablas y formulario se dejaron con un comentario porque todavia las usan tarifas.html y reservas.html (esas paginas no cargan Bootstrap).
+
+Conflictos encontrados (Styles / Computed) y como se resolvieron, sin !important:
+
+1. Mis botones contra los controles del carrusel
+   - Sintoma: al pasar el mouse o enfocar con Tab, los controles anterior/siguiente se pintaban de Azul Noche (rgb(20, 33, 61)) y, con el teclado, no se veia ningun contorno.
+   - Causa: mi regla button:hover/button:focus (0,1,1) le gana al background: none de .carousel-control-prev (0,1,0). Ademas Bootstrap pone outline: 0 en .carousel-control-prev:focus (0,2,0), que tacha mi outline de 3px de button:focus (0,1,1).
+   - Solucion: en styles.css, despues de Bootstrap, reglas .carousel-control-*:hover/:focus con fondo transparente (0,2,0, y van despues) y .carousel-control-*:focus-visible con contorno de 3px Crema.
+
+2. El boton de WhatsApp quedaba debajo del carrusel
+   - Sintoma: al llegar al carrusel, el centro del boton de WhatsApp (position: fixed, sin z-index) recibia el clic del control "siguiente".
+   - Causa: Bootstrap da z-index: 1 a .carousel-control-prev/next y mi .whatsapp tenia z-index: auto, asi que el control quedaba encima.
+   - Solucion: z-index: 1030 en .whatsapp (el mismo nivel que usa Bootstrap para elementos fijos).
+
+3. Colores de Bootstrap contra colores de marca
+   - Sintoma: text-secondary, text-bg-success, bg-warning y bg-dark salian en gris #6c757d, verde #198754, amarillo #ffc107 y gris #212529 en vez de la paleta de Rueda Libre.
+   - Causa: esas utilidades leen las variables --bs-secondary-rgb, --bs-success-rgb, --bs-warning-rgb y --bs-dark-rgb definidas en :root por Bootstrap.
+   - Solucion: redefinirlas en :root de styles.css (que carga despues, misma especificidad): Gris Asfalto, Verde Ruta, Naranja Pedal y Azul Noche. Resultado: rgb(74, 79, 87), rgb(31, 122, 77), rgb(242, 107, 33), rgb(20, 33, 61). Los contrastes de la bitacora del reto 8 siguen valiendo (blanco sobre Verde Ruta 5.32; Azul Noche sobre Naranja 5.25).
+
+Otros ajustes (sin conflicto real, anotados):
+- main { max-width: 60rem } contra .container: con main class="container" gana la clase (0,1,0 contra 0,0,1), el ancho lo da la grilla.
+- Enlaces: a { color: Verde Ruta } y a:hover { Azul Noche } ganan al color de enlace de Bootstrap por ir despues; si styles.css se cargara antes, los enlaces saldrian azules.
+- main ul { padding: 0 } (0,0,2) le gana al padding-left: 2rem de ul en Bootstrap (0,0,1); es la declaracion tachada que se ve en las listas.
+- header { display: flex } (todavia lo usa reservas) hacia que las filas de la portada se encogieran: se envolvieron en un div w-100.
+
+Pruebas de inicio (360, 768 y 1280 px):
+- Sin scroll horizontal en los tres anchos.
+- Portada: 360 una columna (logo arriba); 768 y 1280 dos columnas.
+- Columnas por fila a 360 / 768 / 1280 px (medidas en el navegador): flota 1 / 2 / 4; rutas 1 / 2 / 3; beneficios 1 / 2 / 4. En cada fila las cards miden lo mismo (h-100).
+- Franja final: en columna y sin imagen a 360; en fila y con imagen a 768 y 1280.
+- Teclado: Tab llega a los controles Anterior y Siguiente del carrusel y al boton de WhatsApp; con el contorno de la solucion 1 el foco se ve en los controles.

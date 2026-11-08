@@ -38,6 +38,7 @@ img {
   height: auto;
 }
 
+/* Todavía lo usan tarifas.html y reservas.html (inicio usa main.container) */
 main {
   max-width: 60rem;
   margin-left: auto;
@@ -48,9 +49,7 @@ main ul {
   padding: 0;
 }
 
-.portada {
-  min-height: 60vh;
-}
+/* Todavía lo usa reservas.html (inicio ya usa la grilla de Bootstrap) */
 header {
     display: flex;
     justify-content: space-between;
@@ -67,6 +66,7 @@ a:hover {
   color: var(--azul-noche);
 }
 
+/* Distribución del menú: todavía la usan tarifas.html y reservas.html (inicio usa utilidades) */
 #menu {
     display: flex;
     gap: var(--espacio-2);
@@ -100,6 +100,7 @@ select:focus {
 }
 
 /* ===== 4. COMPONENTES ===== */
+/* button: todavía lo usa reservas.html */
 .boton-cta,
 button,
 .whatsapp {
@@ -138,6 +139,7 @@ button:focus,
   width: 100%;
 }
 
+/* Tablas: todavía las usa tarifas.html */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -169,9 +171,11 @@ th {
   position: fixed;
   right: var(--espacio-3);
   bottom: var(--espacio-3);
+  z-index: 1030; /* Bootstrap da z-index: 1 a los controles del carrusel y tapaban el botón */
 }
 
 /* ===== 5. FORMULARIO ===== */
+/* Toda esta sección todavía la usa reservas.html */
 input,
 select {
   border: 2px solid var(--gris-asfalto);
@@ -202,7 +206,7 @@ select {
 }
 
 
-/* ===== 6. CARRUSEL ===== */
+/* ===== 6. CARRUSEL (conflictos con button) ===== */
 /* La regla global de button no debe pintar los controles del carrusel */
 .carousel-control-prev:hover,
 .carousel-control-prev:focus,
@@ -210,4 +214,21 @@ select {
 .carousel-control-next:focus {
   background-color: transparent;
   color: #fff;
+}
+
+/* Bootstrap quita el contorno al enfocar los controles (outline: 0): se devuelve para el teclado */
+.carousel-control-prev:focus-visible,
+.carousel-control-next:focus-visible {
+  outline: 3px solid var(--crema);
+  outline-offset: -3px;
+}
+
+/* ===== 7. PUENTE CON BOOTSTRAP ===== */
+/* Las utilidades text-secondary, text-bg-success, bg-warning y bg-dark usan estas variables:
+   se apuntan a los colores de marca (valores RGB de las variables de la sección 1) */
+:root {
+  --bs-secondary-rgb: 74, 79, 87;  /* Gris Asfalto */
+  --bs-success-rgb: 31, 122, 77;   /* Verde Ruta */
+  --bs-warning-rgb: 242, 107, 33;  /* Naranja Pedal */
+  --bs-dark-rgb: 20, 33, 61;       /* Azul Noche */
 }
