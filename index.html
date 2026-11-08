@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://jsdelivr.net" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="css/styles.css">
@@ -26,11 +25,47 @@
             </ul>
         </nav>
         <p>Bienvenido al mejor sitio de alquiler de bicicletas de Medellín.</p>
-        <img src="img/depositphotos_320007284-stock-illustration-bicycle-shop-service-bike-park.jpg" alt="Logo de Rueda Libre: piñón de bicicleta con el texto Bike Shop" width="600">
+        <img src="img/icono-aislado-dibujo-de-la-bicicleta-83199925.webp" alt="Logo de Rueda Libre: bicicleta dorada con el texto Rueda Libre" width="600">
         <p>Donde estamos ubicados <a href="#Encuentranos">Ver ubicación de la tienda</a></p>
     </header>
 
     <main>
+        <section aria-label="Promociones">
+            <div id="promociones" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/urbanaclasica.jpeg" class="d-block w-100" alt="Bicicleta urbana clásica" width="1408" height="768">
+                    <div class="carousel-caption bg-dark bg-opacity-75 rounded-3">
+                        <p class="h5 fw-bold mb-1">Día completo desde $50.000</p>
+                        <p class="mb-0">Alquila una bicicleta urbana todo el día.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/plegable.jpeg" class="d-block w-100" alt="Bicicleta urbana plegable" width="1408" height="768">
+                    <div class="carousel-caption bg-dark bg-opacity-75 rounded-3">
+                        <p class="h5 fw-bold mb-1">Casco y candado sin costo</p>
+                        <p class="mb-0">Cada alquiler los incluye.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/montanatrail.jpeg" class="d-block w-100" alt="Bicicleta de montaña trail" width="1408" height="768">
+                    <div class="carousel-caption bg-dark bg-opacity-75 rounded-3">
+                        <p class="h5 fw-bold mb-1">Recorridos guiados</p>
+                        <p class="mb-0">Sábados y domingos a las 7:00 a. m.</p>
+                    </div>
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#promociones" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#promociones" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
         <section>
             <h2>¿Quiénes somos?</h2>
             <p>Somos Rueda Libre, un equipo de apasionados por la vida sobre dos ruedas. Nos dedicamos a conectar a locales y viajeros con la ciudad de una forma activa, ecológica y divertida, ofreciendo bicicletas de excelente calidad para que disfrutes cada kilómetro del camino.</p>
@@ -41,7 +76,7 @@
             <h2>Nuestros servicios</h2>
             <ul>
                 <li class="tarjeta"><span class="etiqueta-nuevo">Nuevo</span><strong>Alquiler por horas o días:</strong> Bicicletas urbanas, de montaña (MTB) y eléctricas que se adaptan a tu ritmo.</li>
-                <li class="tarjeta"><strong>Tours guiados:</strong> Recorridos por los puntos más emblemáticos e históricos de la ciudad. <a href="paginas/tarifas.html#planes">Ver los planes disponibles</a>recorridos
+                <li class="tarjeta"><strong>Tours guiados:</strong> Recorridos por los puntos más emblemáticos e históricos de la ciudad. <a href="paginas/tarifas.html#planes">Ver los planes disponibles</a>
                     <img src="img/images.jpeg" alt="Ilustración de una ruta con curvas, una flecha y un marcador de destino sobre una bicicleta" width="600">
                 </li>
                 <li class="tarjeta"><strong>Equipamiento completo:</strong> Cada alquiler incluye casco, candado de alta seguridad y mapa de ciclorrutas sin costo adicional.</li>
@@ -49,44 +84,105 @@
             </ul>
         </section>
 
-        <article class="seccion-flota">
+        <article class="seccion-flota container">
             <h2>Nuestra flota</h2>
-            
-            <div class="urbanaclasica">
-                <h3>Bicicleta Urbana Clasica</h3>
-                <p>Redescubre el placer de moverte sin prisas. La bicicleta clásica urbana es mucho más que un medio de transporte: es una declaración de estilo, libertad y confort. Diseñada para quienes disfrutan el camino tanto como el destino.</p>
-                <p class="precio"> <strong>$10.000 por hora.</strong></p>
-                <img src="img/urbanaclasica.jpeg" alt="Bicicleta urbana clasica.">
-            </div>
-
-            <div class="urbanaplegable">
-                <h3>Bicicleta Urbana Plegable</h3>
-                <p>La bicicleta urbana plegable es la llave para dominar la ciudad sin límites. Olvídate de buscar estacionamiento o preocuparte por los robos. Llévala en el metro, súbela al autobús o guárdala bajo tu escritorio. Es el vehículo definitivo para el nómada urbano moderno.</p>
-                <p class="precio"><strong>$12.000 por hora</strong></p>
-                <img src="img/plegable.jpeg" alt="Bicicleta urbana plegable">
-            </div>
-
-            <div>
-                <h3>Bicicleta montaña trail</h3>
-                <p>Domina cada sendero, conquista cada montaña. La bicicleta de Trail definitiva está diseñada para quienes no temen ensuciarse y buscan la máxima emoción en la naturaleza. No sigas la ruta: crea la tuya.</p>
-                <p class="precio"><strong>$15.000 por hora</strong>/p>
-                <img src="img/montanatrail.jpeg" alt="Bicicleta montana trail">
-            </div>
-
-            <div>
-                <h3>Bicicleta Gravel Aventura</h3>
-                <p>El asfalto se termina, pero tu viaje no. La bicicleta de Gravel Aventura es la compañera definitiva para los inconformistas, los viajeros de fin de semana y los cazadores de atardeceres. Diseñada para devorar kilómetros, sin importar la superficie.</p>
-                <p class="precio"><strong>$18.000 por hora</strong></p>
-                <img src="img/GravelAventura.jpeg" alt="Bicicleta de tipo Gravel Aventura">
-            </div>
-
-            <div>
-                <h3>Bicicleta Eléctrica Urbana</h3>
-                <p>Imagina cruzar la ciudad volando, sin importar las cuestas ni las distancias. La bicicleta eléctrica urbana transforma tu trayecto diario en el mejor momento del día. Siente el impulso de su motor inteligente y muévete por la ciudad con una sonrisa, sin sudar una sola gota.</p>
-                <p><strong>$25.000 por hora</strong></p>
-                <img src="img/urbanaclasica.jpeg" alt="bicicleta urbana">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/urbanaclasica.jpeg" class="card-img-top" alt="Bicicleta urbana clásica" width="1408" height="768">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Bicicleta Urbana Clásica</h3>
+                            <p class="card-text">Redescubre el placer de moverte sin prisas. La bicicleta clásica urbana es mucho más que un medio de transporte: es una declaración de estilo, libertad y confort. Diseñada para quienes disfrutan el camino tanto como el destino.</p>
+                            <p class="fw-bold">$10.000 por hora</p>
+                            <a class="boton-cta mt-auto align-self-start" href="paginas/reservas.html">Reservar<span class="visually-hidden"> Bicicleta Urbana Clásica</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/plegable.jpeg" class="card-img-top" alt="Bicicleta urbana plegable" width="1408" height="768">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Bicicleta Urbana Plegable</h3>
+                            <p class="card-text">La bicicleta urbana plegable es la llave para dominar la ciudad sin límites. Olvídate de buscar estacionamiento o preocuparte por los robos. Llévala en el metro, súbela al autobús o guárdala bajo tu escritorio. Es el vehículo definitivo para el nómada urbano moderno.</p>
+                            <p class="fw-bold">$12.000 por hora</p>
+                            <a class="boton-cta mt-auto align-self-start" href="paginas/reservas.html">Reservar<span class="visually-hidden"> Bicicleta Urbana Plegable</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/montanatrail.jpeg" class="card-img-top" alt="Bicicleta de montaña trail" width="1408" height="768">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Bicicleta Montaña Trail</h3>
+                            <p class="card-text">Domina cada sendero, conquista cada montaña. La bicicleta de Trail definitiva está diseñada para quienes no temen ensuciarse y buscan la máxima emoción en la naturaleza. No sigas la ruta: crea la tuya.</p>
+                            <p class="fw-bold">$15.000 por hora</p>
+                            <a class="boton-cta mt-auto align-self-start" href="paginas/reservas.html">Reservar<span class="visually-hidden"> Bicicleta Montaña Trail</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/GravelAventura.jpeg" class="card-img-top" alt="Bicicleta de tipo Gravel Aventura" width="1408" height="768">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Bicicleta Gravel Aventura</h3>
+                            <p class="card-text">El asfalto se termina, pero tu viaje no. La bicicleta de Gravel Aventura es la compañera definitiva para los inconformistas, los viajeros de fin de semana y los cazadores de atardeceres. Diseñada para devorar kilómetros, sin importar la superficie.</p>
+                            <p class="fw-bold">$18.000 por hora</p>
+                            <a class="boton-cta mt-auto align-self-start" href="paginas/reservas.html">Reservar<span class="visually-hidden"> Bicicleta Gravel Aventura</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/El%C3%A9ctricaUrbana.jpeg" class="card-img-top" alt="Bicicleta eléctrica urbana" width="1408" height="768">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Bicicleta Eléctrica Urbana</h3>
+                            <p class="card-text">Imagina cruzar la ciudad volando, sin importar las cuestas ni las distancias. La bicicleta eléctrica urbana transforma tu trayecto diario en el mejor momento del día. Siente el impulso de su motor inteligente y muévete por la ciudad con una sonrisa, sin sudar una sola gota.</p>
+                            <p class="fw-bold">$25.000 por hora</p>
+                            <a class="boton-cta mt-auto align-self-start" href="paginas/reservas.html">Reservar<span class="visually-hidden"> Bicicleta Eléctrica Urbana</span></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </article>
+
+        <section class="container" id="rutas">
+            <h2>Galería de rutas</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/urbanaclasica.jpeg" class="card-img-top" alt="Bicicleta urbana clásica" width="1408" height="768">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Río y parques</h3>
+                            <p class="card-text">Recorrido de 12 km con una duración de 2 horas. Nivel: fácil.</p>
+                            <p class="fw-bold">$45.000 por persona</p>
+                            <a class="boton-cta mt-auto align-self-start" href="paginas/reservas.html">Reservar<span class="visually-hidden"> Río y parques</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/GravelAventura.jpeg" class="card-img-top" alt="Bicicleta de tipo Gravel Aventura" width="1408" height="768">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Sabores de barrio</h3>
+                            <p class="card-text">Recorrido de 18 km con una duración de 3 horas. Nivel: medio.</p>
+                            <p class="fw-bold">$60.000 por persona</p>
+                            <a class="boton-cta mt-auto align-self-start" href="paginas/reservas.html">Reservar<span class="visually-hidden"> Sabores de barrio</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/montanatrail.jpeg" class="card-img-top" alt="Bicicleta de montaña trail" width="1408" height="768">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Reto Las Palmas</h3>
+                            <p class="card-text">Recorrido de 25 km con una duración de 4 horas. Nivel: difícil.</p>
+                            <p class="fw-bold">$85.000 por persona</p>
+                            <a class="boton-cta mt-auto align-self-start" href="paginas/reservas.html">Reservar<span class="visually-hidden"> Reto Las Palmas</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
         <section>
@@ -95,7 +191,7 @@
             <ol>
                 <li class="tarjeta"><strong>Elige tu bici:</strong> Selecciona el modelo ideal según tu plan del día.</li>
                 <li class="tarjeta"><strong>Presenta tu documento:</strong> Solo necesitas una identificación oficial vigente (cédula o pasaporte).</li>
-                <li class="tarjeta"><strong>Define el tiempo</strong>Alquila por horas o por días completos.</li>
+                <li class="tarjeta"><strong>Define el tiempo:</strong> Alquila por horas o por días completos.</li>
                 <li class="tarjeta"><strong>¡A rodar!:</strong> Ajustamos la altura del sillín a tu medida y estarás listo para salir a explorar.</li>
             </ol>
         </section>
@@ -148,16 +244,16 @@
         </section>
 
         <footer class="piepagina">
-            <p>Puedes ver nuestra ubicacion exacta en:</p> <a href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwjg1uWv4MmXAxUAAAAAHQAAAAAQCQ..i&channel=fs&client=ubuntu-sn&udm&fvr=1&pvq=CgwvZy8xcHR6aF8wanIiKAoidGllbmRhIGRlIGJpY2ljbGV0YXMgZW4gZWwgcG9ibGFkbxACGAM&lqi=CiJ0aWVuZGEgZGUgYmljaWNsZXRhcyBlbiBlbCBwb2JsYWRvSJeE_ufnlYCACFoyEAAQARACEAMQBBAFGAIiInRpZW5kYSBkZSBiaWNpY2xldGFzIGVuIGVsIHBvYmxhZG-SAQ1iaWN5Y2xlX3N0b3JlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJFYnpoTFdYRm5SUkFC-gEECAAQRA&cs=1&um=1&ie=UTF-8&fb=1&gl=co&sa=X&ftid=0x8e44284b8a0a7ffb:0x15b79b80bc8778a6" target=""_blank">Ver Rueda Libre en Google Maps</a>
-            <p>Puedes contactarnos via gmail</p> <a href="mailto:holaruedalibre@gmail.com" target="blank">Escribir a holaruedalibre@gmail.com</a>
+            <p>Puedes ver nuestra ubicacion exacta en:</p> <a href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwjg1uWv4MmXAxUAAAAAHQAAAAAQCQ..i&channel=fs&client=ubuntu-sn&udm&fvr=1&pvq=CgwvZy8xcHR6aF8wanIiKAoidGllbmRhIGRlIGJpY2ljbGV0YXMgZW4gZWwgcG9ibGFkbxACGAM&lqi=CiJ0aWVuZGEgZGUgYmljaWNsZXRhcyBlbiBlbCBwb2JsYWRvSJeE_ufnlYCACFoyEAAQARACEAMQBBAFGAIiInRpZW5kYSBkZSBiaWNpY2xldGFzIGVuIGVsIHBvYmxhZG-SAQ1iaWN5Y2xlX3N0b3JlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJFYnpoTFdYRm5SUkFC-gEECAAQRA&cs=1&um=1&ie=UTF-8&fb=1&gl=co&sa=X&ftid=0x8e44284b8a0a7ffb:0x15b79b80bc8778a6" target="_blank" rel="noopener noreferrer">Ver Rueda Libre en Google Maps</a>
+            <p>Puedes contactarnos via gmail</p> <a href="mailto:holaruedalibre@gmail.com">Escribir a holaruedalibre@gmail.com</a>
             <div>
                 <h3>Marca</h3>
                 <p>Rueda Libre | Alquiler de bicicletas en Medellín</p>
             </div>
             <div>
                 <h3>Contacto</h3>
-                <p> <a href="mailto:holaruedalibre@gmail.com" target="blank">Gmail</a></p>
-                <P><a href="a class="whatsapp href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a></P>
+                <p> <a href="mailto:holaruedalibre@gmail.com">Gmail</a></p>
+                <p><a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
             </div>
             <div>
                 <h3>Horario</h3>
@@ -170,6 +266,8 @@
     </main>
 
     <a class="whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>

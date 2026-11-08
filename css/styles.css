@@ -201,3 +201,13 @@ select {
   margin-bottom: var(--espacio-3);
 }
 
+
+/* ===== 6. CARRUSEL ===== */
+/* La regla global de button no debe pintar los controles del carrusel */
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+  background-color: transparent;
+  color: #fff;
+}
