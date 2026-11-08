@@ -175,3 +175,23 @@ MINI RETO dia 2 - RUEDA LIBRE v1.0
 - líneas de CSS de distribución de la flota en tu versión propia frente a clases usadas ahora: 12 líneas de CSS aproximadas (usando propiedades como display: flex, flex-wrap: wrap, margin, padding para gutters
 - que te dio Bootstrap sin esfuerzo y qué control perdiste: Responsividad inmediata y fluida en todos los dispositivos, cálculo automático y matemático de los anchos de las columnas, y un sistema de espaciado interno estandarizado 
 
+
+
+========================================================
+MINI RETO dia 3 - UTILIDADES DE BOOTSTRAP
+========================================================
+Pagina: pruebas/catalogo-bootstrap.html (debajo de la flota). Sin style="", sin <style> y sin clases propias en la seccion de beneficios ni en la franja final.
+
+Cinco clases buscadas en la documentacion de Bootstrap 5.3 (buscador de getbootstrap.com):
+1. flex-md-row - cambia flex-direction a row desde el breakpoint md (768px). Junto a flex-column hace que la franja sea columna en celulares y fila desde md.
+2. justify-content-md-between - desde md reparte los elementos de la franja a lo largo del eje principal, con el espacio sobrante entre ellos.
+3. d-none + d-md-block - d-none oculta el elemento (display: none) y d-md-block lo vuelve a mostrar como bloque desde md. Se uso en la imagen decorativa de la franja.
+4. gap-3 - deja un espacio de 1rem entre los hijos de un contenedor flex o grid, sin usar margenes en cada hijo.
+5. text-bg-success - pone fondo verde y escoge solo el color de texto con buen contraste (blanco). Se uso en el dato destacado de cada beneficio.
+
+Mapa de uso de color llevado a Bootstrap (la paleta de Bootstrap no es la de la marca, asi que se usan los colores mas cercanos por rol):
+- Titulo del beneficio: texto principal (color de texto por defecto, oscuro) con fw-bold fs-5.
+- Descripcion: texto secundario -> text-secondary (equivale a Gris Asfalto).
+- Dato destacado: texto blanco sobre fondo verde -> text-bg-success (equivale a Blanco sobre Verde Ruta, aprobado).
+- Franja: texto claro sobre fondo oscuro -> text-bg-dark (equivale a Crema/Blanco sobre Azul Noche).
+- Enlace de la franja: texto oscuro sobre fondo naranja/amarillo -> bg-warning text-dark (equivale a Azul Noche sobre Naranja Pedal; el naranja solo como fondo, nunca como texto).
